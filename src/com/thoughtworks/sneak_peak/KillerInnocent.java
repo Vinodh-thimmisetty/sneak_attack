@@ -36,10 +36,8 @@ public class KillerInnocent {
         List<Player> players = new ArrayList<>();
 
         // consider 1 as Killer and remaining as innocent
-
         for (int i = 0; i < noOfPlayers; i++) {
-            int xx = generateRandom(noOfPlayers);
-            if (xx == KILLER_ID) {
+            if (generateRandom(noOfPlayers) == KILLER_ID) {
                 if (isKillerFound) {
                     players.add(new Player(Role.INNOCENT.toString()));
                 } else {
