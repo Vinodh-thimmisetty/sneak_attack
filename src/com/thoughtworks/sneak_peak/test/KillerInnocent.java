@@ -1,4 +1,4 @@
-package com.thoughtworks.sneak_peak;
+package com.thoughtworks.sneak_peak.test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +33,7 @@ public class KillerInnocent {
         KILLER, INNOCENT
     }
 
+    // consider 1 as Killer and remaining as innocent
     private static Integer KILLER_ID = 0;
 
     public static void main(String[] args) {
@@ -42,7 +43,6 @@ public class KillerInnocent {
         List<Player> players = new ArrayList<>();
         int killerIndex = noOfPlayers - 1; // assuming last player is killer
 
-        // consider 1 as Killer and remaining as innocent
         for (int i = 0; i < noOfPlayers; i++) {
             final int tempIndex = generateRandom(noOfPlayers);
             if (tempIndex == KILLER_ID) {
