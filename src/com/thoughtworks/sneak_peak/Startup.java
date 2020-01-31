@@ -26,7 +26,9 @@ public class Startup {
         players.forEach(x -> ls.log(String.join("", "P", valueOf(x.getPlayerId()), " ", x.getRole().toString())));
         ls.log("========= Attacking the innocents =====");
         ps.killPlayers(players);
-
+        ls.log("========= Attacking && Suspecting =====");
+        ps.suspectAndKillPlayers(players);
     }
+
 
 }

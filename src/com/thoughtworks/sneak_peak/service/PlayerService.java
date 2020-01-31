@@ -12,4 +12,6 @@ public interface PlayerService {
     List<Player> assignRoles(int totalPlayers);
 
     void killPlayers(List<Player> players);
+
+    void suspectAndKillPlayers(List<Player> players);
 }
