@@ -21,11 +21,6 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public int generateRandom(final int totalPlayers) {
-        return new Random().nextInt(totalPlayers);
-    }
-
-    @Override
     public List<Player> assignRoles(final int noOfPlayers) {
         Integer KILLER_ID = 0; // assuming all random numbers with 0 are killers.
         boolean isKillerFound = false;
@@ -65,8 +60,11 @@ public class PlayerServiceImpl implements PlayerService {
         }
     }
 
-    @Override
-    public Player getRandomPlayer(final List<Player> players, final int listSize) {
+    private Player getRandomPlayer(final List<Player> players, final int listSize) {
         return players.get(new Random().nextInt(listSize));
+    }
+
+    private int generateRandom(final int totalPlayers) {
+        return new Random().nextInt(totalPlayers);
     }
 }

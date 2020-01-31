@@ -9,11 +9,7 @@ import java.util.List;
  */
 public interface PlayerService {
 
-    int generateRandom(int totalPlayers);
-
     List<Player> assignRoles(int totalPlayers);
 
     void killPlayers(List<Player> players);
-
-    Player getRandomPlayer(List<Player> players, int listSize);
 }
